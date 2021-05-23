@@ -1,6 +1,10 @@
 name: CmdUI
-version: @version@
+version: 1.0.0
 main: com.putopug.cmdui.CmdUI
 api-version: 1.16
 authors: [ PugzAreCute ]
-description: A simple plugin to 
+description: A simple plugin to
+commands:
+  cmdui:
+    description: Open the CMD Ui
+    usage: /<Command>

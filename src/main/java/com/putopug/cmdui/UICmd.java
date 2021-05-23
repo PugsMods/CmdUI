@@ -5,7 +5,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class UiCmd implements CommandExecutor {
+public class UICmd implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!(sender instanceof Player)){
@@ -13,7 +13,7 @@ public class UiCmd implements CommandExecutor {
             return false;
         }
         Player player = (Player) sender;
-
-        return false;
+        player.openInventory(CmdUI.inventory);
+        return true;
     }
 }
