@@ -1,0 +1,6 @@
+name: CmdUI
+version: @version@
+main: com.putopug.cmdui.CmdUI
+api-version: 1.16
+authors: [ PugzAreCute ]
+description: A simple plugin to 
