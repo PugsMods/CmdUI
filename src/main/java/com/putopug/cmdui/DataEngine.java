@@ -24,6 +24,7 @@ public class DataEngine {
             "    \"title\":\"Tp to 0,0\"\n" +
             "  }\n" +
             "}");
+    Bukkit.getServer().getLogger().log(Level.INFO,"Successfully generated Default slots.json!");
    } catch (IOException e) {
      Bukkit.getLogger().log(Level.WARNING,"WARNING: Failed to create slots.json. Do i have permission to write?");
    }
