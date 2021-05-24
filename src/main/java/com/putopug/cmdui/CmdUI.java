@@ -19,6 +19,8 @@ public final class CmdUI extends JavaPlugin {
         getCommand("cmdui").setExecutor(new UICmd());
         this.getServer().getPluginManager().registerEvents(new Listener(),this);
         invStuff();
+        this.saveDefaultConfig();
+        DataEngine.init();
     }
 
     @Override

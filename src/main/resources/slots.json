@@ -1,8 +1,8 @@
 {
   "slot_1": {
-    "command": "",
-    "item": "",
-    "lore": "",
-    "title":""
+    "command": "tp @s 0 100 0",
+    "item": "minecraft:compass",
+    "lore": "Click on me!",
+    "title":"Tp to 0,0"
   }
 }
