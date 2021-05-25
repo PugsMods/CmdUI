@@ -2,8 +2,9 @@ import org.apache.tools.ant.filters.ReplaceTokens
 
 plugins {
     id 'java'
+    id "com.github.johnrengelman.shadow" version "7.0.0"
 }
-
+apply plugin: 'com.github.johnrengelman.shadow'
 group = 'com.putopug'
 version = '1.0.0'
 
@@ -23,13 +24,19 @@ repositories {
         url = 'https://oss.sonatype.org/content/groups/public/'
     }
 }
+shadowJar {
+    classifier = ''
+    configurations = [project.configurations.shade]
+}
+configurations {
+    shade
+}
 
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
     implementation 'com.google.code.gson:gson:2.8.6'
-    implementation "com.google.guava:guava:29.0-jre"
-    implementation 'com.mojang:datafixerupper:4.0.26'
     implementation 'it.unimi.dsi:fastutil:8.2.1'
+    shade("com.google.code.gson:gson:2.8.6")
 }
 
 processResources {
