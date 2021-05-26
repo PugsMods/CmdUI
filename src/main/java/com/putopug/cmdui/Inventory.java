@@ -10,7 +10,6 @@ public class Inventory {
     public static org.bukkit.inventory.Inventory inventory;
     public static void init(){
 
-        DeJsonizer.init();
         inventory = Bukkit.createInventory(null, 27, "Tp menu");
         ItemStack itemStack = new ItemStack(Material.AIR);
         ItemMeta meta = itemStack.getItemMeta();

@@ -1,6 +1,7 @@
 package com.putopug.cmdui;
 
 import com.putopug.cmdui.config.DataEngine;
+import com.putopug.cmdui.config.DeJsonizer;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class CmdUI extends JavaPlugin {
@@ -10,8 +11,8 @@ public final class CmdUI extends JavaPlugin {
         getCommand("cmdui").setExecutor(new UICmd());
         this.getServer().getPluginManager().registerEvents(new Listener(), this);
         this.saveDefaultConfig();
+        DeJsonizer.init();
         DataEngine.init();
-        Inventory.init();
     }
 
     @Override
