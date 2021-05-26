@@ -4,6 +4,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
+/**
+ * @author PugzAreCute
+ */
 public class Listener implements org.bukkit.event.Listener {
     @EventHandler
     public void onClickInInv(InventoryClickEvent event) {

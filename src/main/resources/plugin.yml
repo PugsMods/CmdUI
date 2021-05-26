@@ -6,7 +6,7 @@ authors: [ PugzAreCute ]
 description: A simple plugin to
 commands:
   cmdui:
-    description: Open the CMD Ui
+    description: Open the CMD UI
     usage: /<Command>
     permission: cmdui.opencmdui
     permission-message: §cSorry! You don't have permissions to use this command, if you think this is a mistake please contact the admins of this server!

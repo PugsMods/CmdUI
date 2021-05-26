@@ -7,7 +7,8 @@
         "line_1": "Click on mee!",
         "line_2": "",
         "line_3": ""
-      }
+      },
+      "displayName": "Hi!"
     },
     "slot_2": {
       "command": "tp @s 0 100 0",
@@ -16,7 +17,8 @@
         "line_1": "Click on mee!",
         "line_2": "",
         "line_3": ""
-      }
+      },
+      "displayName": "Hi!"
     }
   }
 }

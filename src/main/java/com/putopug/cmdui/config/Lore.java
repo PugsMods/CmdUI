@@ -3,6 +3,9 @@ package com.putopug.cmdui.config;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author PugzAreCute
+ */
 public class Lore {
     private String line_1;
     private String line_2;

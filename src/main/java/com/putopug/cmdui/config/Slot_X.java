@@ -1,5 +1,8 @@
 package com.putopug.cmdui.config;
 
+/**
+ * @author PugzAreCute
+ */
 public class Slot_X {
     private final String command;
     private final String item;

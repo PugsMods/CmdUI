@@ -8,12 +8,14 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
+/**
+ * @author PugzAreCute
+ */
 public class DeJsonizer {
     public static Slots slts;
 
     public static void init() {
         Gson gson = new Gson();
-
             try {
                 slts = gson.fromJson(new BufferedReader(new FileReader(Bukkit.getServer().getPluginManager().getPlugin("CmdUI").getDataFolder()+"\\slots.json")), Slots.class);
                 Inventory.init();
