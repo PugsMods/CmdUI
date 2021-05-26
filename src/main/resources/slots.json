@@ -1,7 +1,7 @@
 {
   "slots":{
-    "slot_1": {
-      "command": "tp @s 0 100 0",
+    "slot_0": {
+      "command": "tp ${player_name} 0 100 0",
       "item": "minecraft:compass",
       "lore": {
         "line_1": "Click on mee!",
@@ -11,14 +11,25 @@
       "displayName": "Hi!"
     },
     "slot_2": {
-      "command": "tp @s 0 100 0",
+      "command": "tp ${player_name} 0 100 0",
       "item": "minecraft:compass",
       "lore": {
         "line_1": "Click on mee!",
         "line_2": "",
         "line_3": ""
       },
-      "displayName": "Hi!"
+      "displayName": "Tp to 0,100,0"
+    },
+    "slot_3": {
+      "command": "${cmdui.utils.tp_to_world_spawn}",
+      "item": "minecraft:dirt_block",
+      "lore": {
+        "line_1": "Click on mee!",
+        "line_2": "",
+        "line_3": ""
+      },
+      "displayName": "Tp to wold spawn!"
     }
-  }
+  },
+  "ui_title": "Menu"
 }

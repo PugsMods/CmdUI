@@ -9,9 +9,13 @@ import java.util.Map;
  */
 public class Slots {
     private Map<String, Slot_X> slots;
+    private String ui_title;
 
     public Map<String, Slot_X> getSlots() {
         return slots;
+    }
+    public String getUiTitle(){
+        return ui_title;
     }
 }
 

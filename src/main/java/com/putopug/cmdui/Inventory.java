@@ -7,6 +7,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.Locale;
+import java.util.logging.Level;
 
 /**
  * @author PugzAreCute
@@ -14,15 +15,27 @@ import java.util.Locale;
 public class Inventory {
     public static org.bukkit.inventory.Inventory inventory;
     public static void init(){
-        inventory = Bukkit.createInventory(null, 27, "Tp menu");
+        inventory = Bukkit.createInventory(null, 27, DeJsonizer.slts.getUiTitle());
         ItemStack itemStack = new ItemStack(Material.AIR);
         ItemMeta meta;
 
         for (Object x : DeJsonizer.slts.getSlots().keySet()) {
-            itemStack.setType(Material.getMaterial(DeJsonizer.slts.getSlots().get(x).getItem().replaceAll("minecraft:","").toUpperCase(Locale.ROOT)));
+            if(Material.getMaterial(DeJsonizer.slts.getSlots().get(x.toString()).getItem().replaceAll("minecraft:","").toUpperCase(Locale.ROOT)) != null){
+            itemStack.setType(Material.getMaterial(DeJsonizer.slts.getSlots().get(x.toString()).getItem().replaceAll("minecraft:","").toUpperCase(Locale.ROOT)));
+            }else{
+                Bukkit.getLogger().log(Level.SEVERE,"Oops! dod you make a mistake for "+x+"'s item? "+Material.getMaterial(DeJsonizer.slts.getSlots().get(x.toString()).getItem().replaceAll("minecraft:",""))+" in not a valid item");
+            }
             meta = itemStack.getItemMeta();
-            meta.setDisplayName(DeJsonizer.slts.getSlots().get(x.toString()).getDisplayName());
-            meta.setLore(DeJsonizer.slts.getSlots().get(x.toString()).getLore().getLore());
+            if (meta != null) {
+                meta.setDisplayName(DeJsonizer.slts.getSlots().get(x.toString()).getDisplayName());
+            }else {
+                Bukkit.getLogger().log(Level.SEVERE,"Some error occurred, please check sots.json");
+            }
+            if (meta != null) {
+                meta.setLore(DeJsonizer.slts.getSlots().get(x.toString()).getLore().getLore());
+            }else {
+                Bukkit.getLogger().log(Level.SEVERE,"Some error occurred, please check sots.json");
+            }
             itemStack.setItemMeta(meta);
             inventory.setItem(Integer.parseInt(x.toString().replaceAll("slot_","")),itemStack);
         }
