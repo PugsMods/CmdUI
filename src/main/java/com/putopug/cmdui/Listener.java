@@ -22,7 +22,7 @@ public class Listener implements org.bukkit.event.Listener {
 
         for (Object x: DeJsonizer.slts.getSlots().keySet()){
             if(event.getSlot() == Integer.parseInt(x.toString().replaceAll("slot_",""))){
-                if(!(DeJsonizer.slts.getSlots().get(x.toString()).getCommand().equals("${cmdui.utils.tp_to_world_spawn}"))){
+                if(DeJsonizer.slts.getSlots().get(x.toString()).getCommand().equals("${cmdui.utils.tp_to_world_spawn}")){
                     player.teleport(event.getWhoClicked().getWorld().getSpawnLocation());
                     return;
                 }else{

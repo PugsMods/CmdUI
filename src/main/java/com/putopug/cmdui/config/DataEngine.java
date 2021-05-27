@@ -19,8 +19,8 @@ public class DataEngine {
                 FileWriter writer = new FileWriter(Bukkit.getServer().getPluginManager().getPlugin("CmdUI").getDataFolder() + "\\slots.json");
                 writer.write("{\n" +
                         "  \"slots\":{\n" +
-                        "    \"slot_1\": {\n" +
-                        "      \"command\": \"tp @s 0 100 0\",\n" +
+                        "    \"slot_0\": {\n" +
+                        "      \"command\": \"tp ${player_name} 0 100 0\",\n" +
                         "      \"item\": \"minecraft:compass\",\n" +
                         "      \"lore\": {\n" +
                         "        \"line_1\": \"Click on mee!\",\n" +
@@ -30,16 +30,27 @@ public class DataEngine {
                         "      \"displayName\": \"Hi!\"\n" +
                         "    },\n" +
                         "    \"slot_2\": {\n" +
-                        "      \"command\": \"tp @s 0 100 0\",\n" +
+                        "      \"command\": \"tp ${player_name} 0 100 0\",\n" +
                         "      \"item\": \"minecraft:compass\",\n" +
                         "      \"lore\": {\n" +
                         "        \"line_1\": \"Click on mee!\",\n" +
                         "        \"line_2\": \"\",\n" +
                         "        \"line_3\": \"\"\n" +
                         "      },\n" +
-                        "      \"displayName\": \"Hi!\"\n" +
+                        "      \"displayName\": \"Tp to spawn!\"\n" +
+                        "    },\n" +
+                        "    \"slot_3\": {\n" +
+                        "      \"command\": \"${cmdui.utils.tp_to_world_spawn}\",\n" +
+                        "      \"item\": \"minecraft:dirt_block\",\n" +
+                        "      \"lore\": {\n" +
+                        "        \"line_1\": \"Click on mee!\",\n" +
+                        "        \"line_2\": \"\",\n" +
+                        "        \"line_3\": \"\"\n" +
+                        "      },\n" +
+                        "      \"displayName\": \"Tp to wold spawn!\"\n" +
                         "    }\n" +
-                        "  }\n" +
+                        "  },\n" +
+                        "  \"ui_title\": \"Menu\"\n" +
                         "}");
                 Bukkit.getServer().getLogger().log(Level.INFO, "Successfully generated Default slots.json!");
             } catch (IOException e) {
