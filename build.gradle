@@ -12,7 +12,6 @@ targetCompatibility = '1.8'
 repositories {
     mavenCentral()
     maven {url "https://libraries.minecraft.net"}
-    maven {url "https://mvnrepository.com/artifact/it.unimi.dsi/fastutil"}
     maven {
         name = 'spigotmc-repo'
         url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
@@ -29,8 +28,6 @@ configurations {
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
     implementation 'com.google.code.gson:gson:2.8.6'
-    implementation 'it.unimi.dsi:fastutil:8.2.1'
-    shade ('it.unimi.dsi:fastutil:8.2.1')
     shade("com.google.code.gson:gson:2.8.6")
 }
 shadowJar {
