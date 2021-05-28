@@ -17,7 +17,7 @@ public class DataEngine {
             Bukkit.getLogger().log(Level.INFO, "Detected slots.json to be missing, generating....");
             try {
                 file.createNewFile();
-                FileWriter writer = new FileWriter(Bukkit.getServer().getPluginManager().getPlugin("CmdUI").getDataFolder() + "\\slots.json");
+                FileWriter writer = new FileWriter(Bukkit.getServer().getPluginManager().getPlugin("CmdUI").getDataFolder() + File.separator +"slots.json");
                 writer.write("{\n" +
                         "  \"slots\":{\n" +
                         "    \"slot_0\": {\n" +
