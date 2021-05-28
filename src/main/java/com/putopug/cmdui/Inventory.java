@@ -1,6 +1,6 @@
 package com.putopug.cmdui;
 
-import com.putopug.cmdui.config.DeJsonizer;
+import com.putopug.cmdui.config.DataEngine;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -15,24 +15,24 @@ import java.util.logging.Level;
 public class Inventory {
     public static org.bukkit.inventory.Inventory inventory;
     public static void init(){
-        inventory = Bukkit.createInventory(null, 27, DeJsonizer.slts.getUiTitle());
+        inventory = Bukkit.createInventory(null, 27, DataEngine.slts.getUiTitle());
         ItemStack itemStack = new ItemStack(Material.AIR);
         ItemMeta meta;
 
-        for (Object x : DeJsonizer.slts.getSlots().keySet()) {
-            if(Material.getMaterial(DeJsonizer.slts.getSlots().get(x.toString()).getItem().replaceAll("minecraft:","").toUpperCase(Locale.ROOT)) != null){
-            itemStack.setType(Material.getMaterial(DeJsonizer.slts.getSlots().get(x.toString()).getItem().replaceAll("minecraft:","").toUpperCase(Locale.ROOT)));
+        for (Object x : DataEngine.slts.getSlots().keySet()) {
+            if(Material.getMaterial(DataEngine.slts.getSlots().get(x.toString()).getItem().replaceAll("minecraft:","").toUpperCase(Locale.ROOT)) != null){
+            itemStack.setType(Material.getMaterial(DataEngine.slts.getSlots().get(x.toString()).getItem().replaceAll("minecraft:","").toUpperCase(Locale.ROOT)));
             }else{
-                Bukkit.getLogger().log(Level.SEVERE,"Oops! dod you make a mistake for "+x+"'s item? "+Material.getMaterial(DeJsonizer.slts.getSlots().get(x.toString()).getItem().replaceAll("minecraft:",""))+" in not a valid item");
+                Bukkit.getLogger().log(Level.SEVERE,"Oops! dod you make a mistake for "+x+"'s item? "+Material.getMaterial(DataEngine.slts.getSlots().get(x.toString()).getItem().replaceAll("minecraft:",""))+" in not a valid item");
             }
             meta = itemStack.getItemMeta();
             if (meta != null) {
-                meta.setDisplayName(DeJsonizer.slts.getSlots().get(x.toString()).getDisplayName());
+                meta.setDisplayName(DataEngine.slts.getSlots().get(x.toString()).getDisplayName());
             }else {
                 Bukkit.getLogger().log(Level.SEVERE,"Some error occurred, please check sots.json");
             }
             if (meta != null) {
-                meta.setLore(DeJsonizer.slts.getSlots().get(x.toString()).getLore().getLore());
+                meta.setLore(DataEngine.slts.getSlots().get(x.toString()).getLore().getLore());
             }else {
                 Bukkit.getLogger().log(Level.SEVERE,"Some error occurred, please check sots.json");
             }

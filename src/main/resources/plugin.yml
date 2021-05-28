@@ -11,6 +11,7 @@ commands:
     permission: cmdui.opencmdui
     permission-message: §cSorry! You don't have permissions to use this command, if you think this is a mistake please contact the admins of this server!
   cmdreload:
-    usage: /cmdreload
+    usage: "Usage: /cmdreload"
     description: Reload CmdUI from ìts configs!
     permission: cmdui.reload
+    permission-message: §cSorry! You don't have permissions to use this command, if you think this is a mistake please contact the admins of this server!
