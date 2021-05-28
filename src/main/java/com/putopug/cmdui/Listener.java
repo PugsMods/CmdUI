@@ -20,14 +20,18 @@ public class Listener implements org.bukkit.event.Listener {
         Player player = (Player) event.getWhoClicked();
 
         for (Object x: DataEngine.slts.getSlots().keySet()){
-            if(event.getSlot() == Integer.parseInt(x.toString().replaceAll("slot_",""))){
-                if(DataEngine.slts.getSlots().get(x.toString()).getCommand().equals("${cmdui.utils.tp_to_world_spawn}")){
-                    player.teleport(event.getWhoClicked().getWorld().getSpawnLocation());
-                    return;
-                }else{
-                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(),DataEngine.slts.getSlots().get(x.toString()).getCommand().replaceAll("\\$\\{player_name}",player.getDisplayName()));
+            if(player.hasPermission(DataEngine.slts.getSlots().get(x.toString()).getPermissionNode())){
+                if(event.getSlot() == Integer.parseInt(x.toString().replaceAll("slot_",""))){
+                    if(DataEngine.slts.getSlots().get(x.toString()).getCommand().equals("${cmdui.utils.tp_to_world_spawn}")){
+                        player.teleport(event.getWhoClicked().getWorld().getSpawnLocation());
+                        return;
+                    }else{
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(),DataEngine.slts.getSlots().get(x.toString()).getCommand().replaceAll("\\$\\{player_name}",player.getDisplayName()));
+                    }
                 }
+            }else{
+                player.sendMessage("You do not have permission to use that command!");
             }
-        }
+            }
     }
 }
