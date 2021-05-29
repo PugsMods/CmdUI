@@ -1,7 +1,5 @@
 package com.putopug.cmdui.config;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -14,7 +12,8 @@ public class Slots {
     public Map<String, Slot_X> getSlots() {
         return slots;
     }
-    public String getUiTitle(){
+
+    public String getUiTitle() {
         return ui_title;
     }
 }

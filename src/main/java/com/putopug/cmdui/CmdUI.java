@@ -15,6 +15,7 @@ public final class CmdUI extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new Listener(), this);
         this.saveDefaultConfig();
     }
+
     @Override
     public void onDisable() {
     }
