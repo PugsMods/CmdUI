@@ -40,7 +40,8 @@ public class DataEngine {
                         "        \"line_2\": \"\",\n" +
                         "        \"line_3\": \"\"\n" +
                         "      },\n" +
-                        "      \"displayName\": \"Tp to spawn!\"\n" +
+                        "      \"permission_node\": \"\",\n" +
+                        "      \"displayName\": \"Tp to 0,100,0\"\n" +
                         "    },\n" +
                         "    \"slot_3\": {\n" +
                         "      \"command\": \"${cmdui.utils.tp_to_world_spawn}\",\n" +

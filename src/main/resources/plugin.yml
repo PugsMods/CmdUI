@@ -1,5 +1,5 @@
 name: CmdUI
-version: 1.0.0
+version: 1.0.1
 main: com.putopug.cmdui.CmdUI
 api-version: 1.16
 authors: [ PugzAreCute ]
