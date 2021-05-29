@@ -17,7 +17,7 @@ public class DataEngine {
             Bukkit.getLogger().log(Level.INFO, "Detected slots.json to be missing, generating....");
             try {
                 file.createNewFile();
-                FileWriter writer = new FileWriter(Bukkit.getServer().getPluginManager().getPlugin("CmdUI").getDataFolder() + File.separator +"slots.json");
+                FileWriter writer = new FileWriter(Bukkit.getServer().getPluginManager().getPlugin("CmdUI").getDataFolder() + File.separator + "slots.json");
                 writer.write("{\n" +
                         "  \"slots\":{\n" +
                         "    \"slot_0\": {\n" +
@@ -56,14 +56,13 @@ public class DataEngine {
                 Bukkit.getServer().getLogger().log(Level.INFO, "Successfully generated Default slots.json!");
             } catch (IOException e) {
                 Bukkit.getLogger().log(Level.WARNING, "WARNING: Failed to create slots.json. Do i have permission to write?");
-            }
+            }}
             Gson gson = new Gson();
             try {
-                slts = gson.fromJson(new BufferedReader(new FileReader(Bukkit.getServer().getPluginManager().getPlugin("CmdUI").getDataFolder()+"\\slots.json")), Slots.class);
+                slts = gson.fromJson(new BufferedReader(new FileReader(Bukkit.getServer().getPluginManager().getPlugin("CmdUI").getDataFolder() + File.separator + "slots.json")), Slots.class);
                 Inventory.init();
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-        }
     }
 }

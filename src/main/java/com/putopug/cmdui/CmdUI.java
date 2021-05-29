@@ -9,11 +9,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class CmdUI extends JavaPlugin {
     @Override
     public void onEnable() {
+        DataEngine.init();
         getCommand("cmdui").setExecutor(new UICmd());
         getCommand("cmdreload").setExecutor(new Reload());
         this.getServer().getPluginManager().registerEvents(new Listener(), this);
         this.saveDefaultConfig();
-        DataEngine.init();
     }
     @Override
     public void onDisable() {
