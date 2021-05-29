@@ -30,6 +30,7 @@ public class DataEngine {
                         "        \"line_2\": \"\",\n" +
                         "        \"line_3\": \"\"\n" +
                         "      },\n" +
+                        "      \"permission_node\": \"\",\n" +
                         "      \"displayName\": \"Hi!\"\n" +
                         "    },\n" +
                         "    \"slot_2\": {\n" +
@@ -51,6 +52,7 @@ public class DataEngine {
                         "        \"line_2\": \"\",\n" +
                         "        \"line_3\": \"\"\n" +
                         "      },\n" +
+                        "      \"permission_node\": \"\",\n" +
                         "      \"displayName\": \"Tp to wold spawn!\"\n" +
                         "    }\n" +
                         "  },\n" +

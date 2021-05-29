@@ -8,6 +8,7 @@
         "line_2": "",
         "line_3": ""
       },
+      "permission_node": "",
       "displayName": "Hi!"
     },
     "slot_2": {
@@ -29,6 +30,7 @@
         "line_2": "",
         "line_3": ""
       },
+      "permission_node": "",
       "displayName": "Tp to wold spawn!"
     }
   },
