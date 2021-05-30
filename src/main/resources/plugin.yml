@@ -1,12 +1,12 @@
 name: CmdUI
-version: 1.0.1
+version: 1.0.2
 main: com.putopug.cmdui.CmdUI
 api-version: 1.16
 authors: [ PugzAreCute ]
 description: A simple plugin to
 commands:
   cmdui:
-    description: Open the CMD UI
+    description: Open the CMD
     usage: /<Command>
     permission: cmdui.opencmdui
     permission-message: §cSorry! You don't have permissions to use this command, if you think this is a mistake please contact the admins of this server!
