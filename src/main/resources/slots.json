@@ -24,7 +24,7 @@
     },
     "slot_3": {
       "command": "${cmdui.utils.tp_to_world_spawn}",
-      "item": "minecraft:dirt_block",
+      "item": "minecraft:dirt",
       "lore": {
         "line_1": "Click on mee!",
         "line_2": "",

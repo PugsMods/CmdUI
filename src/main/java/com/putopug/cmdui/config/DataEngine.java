@@ -46,7 +46,7 @@ public class DataEngine {
                         "    },\n" +
                         "    \"slot_3\": {\n" +
                         "      \"command\": \"${cmdui.utils.tp_to_world_spawn}\",\n" +
-                        "      \"item\": \"minecraft:dirt_block\",\n" +
+                        "      \"item\": \"minecraft:dirt\",\n" +
                         "      \"lore\": {\n" +
                         "        \"line_1\": \"Click on mee!\",\n" +
                         "        \"line_2\": \"\",\n" +
