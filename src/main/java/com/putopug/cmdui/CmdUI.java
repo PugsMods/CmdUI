@@ -12,7 +12,7 @@ public final class CmdUI extends JavaPlugin {
         DataEngine.init();
         getCommand("cmdui").setExecutor(new UICmd());
         getCommand("cmdreload").setExecutor(new Reload());
-        this.getServer().getPluginManager().registerEvents(new Listener(), this);
+        this.getServer().getPluginManager().registerEvents(new Listener(this), this);
         this.saveDefaultConfig();
     }
 

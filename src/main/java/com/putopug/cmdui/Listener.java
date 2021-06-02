@@ -10,6 +10,11 @@ import org.bukkit.event.inventory.InventoryClickEvent;
  * @author PugzAreCute
  */
 public class Listener implements org.bukkit.event.Listener {
+    public static CmdUI plugin;
+    public Listener(CmdUI ins) {
+        plugin=ins;
+    }
+
     @EventHandler
     public void onClickInInv(InventoryClickEvent event) {
         if (!event.getInventory().equals(Inventory.inventory)) return;
